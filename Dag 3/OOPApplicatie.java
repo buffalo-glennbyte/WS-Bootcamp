@@ -5,6 +5,7 @@ public class OOPApplicatie {
 
 		Scanner inputScanner = new Scanner(System.in);
 
+		//Temp
 		Organism alien = new Organism();
 		alien.setName("Gorbladorx");
 		alien.setAge(666);
