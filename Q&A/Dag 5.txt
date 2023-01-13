@@ -1,0 +1,90 @@
+1. Wat is een property?
+Dat is een variabele binnen een class
+
+2. Maak een methode met de naam printText die “Het werkt” print naar de console.
+public void printText {
+	System.out.println("Het werkt");
+}
+
+3. Wat zijn de default waardes van alle primatives?
+0, 0.0 of null
+
+4. Wat is de default waarde van een object/pointer?
+null
+
+5. In welk gheheugen worden variables bewaard? In welk geheugen worden objecten bewaard?
+Variabelen worden bewaard in Stack memory en alle objecten worden bewaard in Heap memory.
+
+6. Stel we hebben een class Person met 2 properties name and age. Hoe kunnen we een Person object aanmaken en de properties vullen? Schrijf hiervoor code.
+Person oefening = new Person("Harry", 69);
+
+7. Stel: Person heeft een method setData en die krijgt 2 arguments om de properties in te stellen. Schrijf de code hoe de methode eruit zou zien.
+public void setData (String tempName, int tempAge) {
+	this.age = tempAge;
+	this.name = tempName;
+}
+
+8. Met welke keyword kunnen we data teruggeven?
+return
+
+
+9. Waar of niet waar? Na een return kunnen we geen code meer uitvoeren.
+Waar
+
+10. Hoe heet de combinatie van methode naam en arguments? Wat is de belangrijkste kenmerk van deze combinatie.
+/
+
+11. Kunnen we 3 methodes hebben met hetzelfde naam?
+Nee, niet in dezelfde Class.
+Methodes met dezelfde naam uit verschillende classes kunnen wel worden aangeroepen, mits de desbetreffende class expliciet voor de methode word gezet.
+
+Bijvoorbeeld:
+class1.method();
+class2.method();
+
+========================================================
+				ANTWOORDEN
+========================================================
+
+1. Wat is een property?
+Dat is een kenmerk van een class
+
+2. Maak een methode met de naam printText die “Het werkt” print naar de console.
+public void printText() {
+	System.out.println("Het werkt");
+}
+
+3. Wat zijn de default waardes van alle primatives?
+byte, short, int en long = 0
+float en double = 0.0
+char = \u0000
+boolean = false
+
+4. Wat is de default waarde van een object/pointer?
+null
+
+5. In welk gheheugen worden variables bewaard? In welk geheugen worden objecten bewaard?
+Variabelen worden bewaard in Stack memory en alle objecten worden bewaard in Heap memory.
+
+6. Stel we hebben een class Person met 2 properties name and age. Hoe kunnen we een Person object aanmaken en de properties vullen? Schrijf hiervoor code.
+Person oefening = new Person();
+oefening.age = 69;
+oefening.name = "Harry";
+
+7. Stel: Person heeft een method setData en die krijgt 2 arguments om de properties in te stellen. Schrijf de code hoe de methode eruit zou zien.
+public void setData (String tempName, int tempAge) {
+	this.age = tempAge;
+	this.name = tempName;
+}
+
+8. Met welke keyword kunnen we data teruggeven?
+return
+
+9. Waar of niet waar? Na een return kunnen we geen code meer uitvoeren.
+Waar
+
+10. Hoe heet de combinatie van methode naam en arguments? Wat is de belangrijkste kenmerk van deze combinatie.
+Dat heet een signature, bij het aanroepen van de methode moet dit zijn conform de signature
+
+11. Kunnen we 3 methodes hebben met hetzelfde naam?
+Dat kan, mits de signatures anders zijn.
