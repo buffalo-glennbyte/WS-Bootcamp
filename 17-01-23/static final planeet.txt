@@ -1,0 +1,6 @@
+class Planeet {
+	String seizoen; //is voor elke planeet anders
+	static isInUniversum = true; //wordt gedeeld door elke planeet maar kan veranderen
+	final double diameterPlaneet;	//is voor elke planeet anders maar kan niet meer wijzigen
+	final static String lichtSnelheid = "300"; //is voor alle planeten hetzelfde en kan niet veranderen
+}

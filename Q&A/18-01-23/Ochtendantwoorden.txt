@@ -1,0 +1,77 @@
+// = vergeten of verbetering
+
+1:
+- byte, short, int, long
+- float, double
+- char
+//- boolean
+
+
+2:
+Compileert niet want karel kan niet worden gemaakt van class Arts die abstract is.
+//Arts kan ook niet bij methode van Chirurg, karel.BelleBellen();
+
+
+3:
+class Telefoon {
+}
+
+class Mens {
+	Telefoon oudeTelefoon;
+}
+
+
+4:
+super();
+
+
+5:
+Hij doet het
+Heb je goed gepoetst?
+
+6:
+010
+//8, want hij valt in het octale getallenstelsel door de 0 ervoor.
+
+
+7:
+Wanneer er een variabele wordt gedeclareerd binnen een class, krijgt deze de default waarde tot hij een eigen waarde krijgt toegewezen.
+//alle variabele, behalve final variabelen.
+
+
+8:
+class Demo {
+	public static void main(String... args){
+		Fruit f1 =  new Fruit();
+		f1.pakFruit();
+		f1.neemHap();
+		Fruit.neemHap();
+	}
+}
+
+class Fruit{
+	void pakFruit(){
+		System.out.println("Je pakt een banaan.");
+	}
+
+	static void neemHap(){
+		System.out.println("Je neemt een hap.");
+	}
+}
+
+
+
+9:
+private: 	alleen aan te passen in de class
+default:	package-private, door iedereen in dezelfde package aan te passen
+protected:	binnen eigen class en subclass aan te passen
+public: 	door iedereen aan te passen
+
+
+10:
+class Mens{
+	String naam;
+	void geefNaam(String naam){
+		this.naam = naam;
+	}
+}

@@ -1,0 +1,159 @@
+https://github.com/buffalo-glennbyte
+1.
+Welke 3 categorien exceptions zijn er en wat moet je per categorie onthouden?
+- Runtime exceptions, deze worden gegooid als er onverwachts een exception is.
+- Checked exceptions, deze worden gecontroleerd naar voren gegooid.
+
+2.
+Wat wordt er op het scherm geprint?
+class Demo{
+    public static void main(String[] args){
+        char getal = 70;
+        double getal2 = getal;
+        System.out.println(getal2);
+        float getal3 = 20.0;
+        System.out.println(getal3);
+    }
+}
+
+70.0
+20.0
+
+3.
+Verzin een ochtendvraag voor je collega-studenten.
+X
+
+4.
+Welke 4 geheugen-onderdelen zijn er en wat is er karakteristiek aan?
+- Heap, hier komen objecten in.
+- Stack, hier komen primitive waardes en data in.
+
+5.
+Wat wordt er op het scherm geprint?
+class Demo{ 
+    public static void main(String[] args){
+        Dier d = new Kip();
+        d.lopen();
+    }
+}
+class Dier{
+    void lopen(){
+        System.out.println("Dier");
+    }
+}
+
+class Kip extends Dier{
+    int lopen(){
+        System.out.println("kip");
+        return 5;
+    }
+}
+
+Dier
+
+6.
+Programmeer een werkend voorbeeld van een try-catch statement.
+
+try { 3 / 0 }
+catch (ArithmicException AE){ system.out.println("Kan niet delen door nul.");}
+
+7.
+Wat betekend Covariant? Geef een voorbeeld in broncode.
+class Human {}
+class Adult extends Human {}
+class Child extends Human {}
+
+Adult en Child zijn een covariant van Human.
+
+8.
+Wat wordt er op het scherm geprint?
+class Demo{
+    public static void main(String[] args){
+        HooiVork h = new HooiVork();
+        HooiVork h2 = new HooiVork();
+    }
+}
+
+class Bezem{
+    int a = hoi();
+    static int hoi(){
+        System.out.println("in hoi");
+        return 17;
+    }
+}
+class HooiVork{
+    {
+        System.out.println("in iets");
+    }
+    static {
+        System.out.println("iets anders");
+    }
+    HooiVork(){
+        System.out.println("ooit weer");
+    }
+}
+
+in iets
+iets anders
+ooit weer
+in iets
+iets anders
+ooit weer
+
+9. 
+Wat wordt er op het scherm geprint?
+class Demo{ 
+    public static void main(String[] args){
+        Hond hond = new Hond();
+        hond.lopen();
+        hond.lopen(25);
+        System.out.println(hond.a);
+    }
+}
+
+interface Go{
+    int a;
+    public abstract void lopen();
+}
+
+class Hond implements Go{
+
+    public void lopen(){
+        System.out.println("lopen met" + a);
+    }
+    int lopen(int r){
+        System.out.println("in lopen met r");
+        return 17;
+    }
+}
+
+Compile error, int a in Interface Go is niet abstract.
+
+10.
+Wat wordt er op het scherm geprint?
+class Demo{   
+    final static public void main(String[] ab){
+        Trial q = new Trial();
+        Trial w = q;
+        q.a++;
+        new Trial();
+        new Trial();
+        System.out.println(w.b);
+        System.out.println(w.a);
+        System.out.println("Einde");
+    }
+}
+class Trial{
+    Trial(){
+        System.out.println("hoi");
+    }
+     int abc(){
+        System.out.println("ff checken");
+        return a++;
+    }
+     static int a = 22;
+     int b = abc();
+
+}
+
+Compile error, main method kan niet final zijn.

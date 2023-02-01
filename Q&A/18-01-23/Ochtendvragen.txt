@@ -1,0 +1,71 @@
+1. Noem alle primitives.
+
+
+
+
+2. Wat wordt er op het scherm geprint?
+class Demo {
+    public static void main(String... args){
+   	 Arts karel = new Arts();
+   	 karel.BelleBellen();
+    }
+}
+abstract class Arts{
+
+}
+class Chirurg extends Arts{
+    void BelleBellen(){
+   	 System.out.println("Hoe gaat het?");
+    }
+
+}
+
+3. Programmeer een voorbeeld van een Has-A relatie.
+
+4. Wat is het eerste (impliciete) statement van iedere constructor?
+
+5. Wat wordt er op het scherm geprint?
+class Demo {  
+    public static void main(String... args){
+   	 System.out.println("Hij doet het");
+   	 KaakChirurg kees = new KaakChirurg();
+   	 kees.BelleBellen(25);
+
+    }
+}
+abstract class Arts{
+    abstract void BelleBellen(int a);
+}
+abstract class Chirurg extends Arts{
+
+
+}
+class KaakChirurg extends Chirurg{
+    void BelleBellen(int a){
+   	 System.out.println("Heb je goed gepoetst?");
+    }
+    void BelleBellen() {
+   	 System.out.println("Heb je slecht gepoetst?");   	 
+    }
+
+}
+
+6. Wat wordt er op het scherm geprint?
+
+class Demo {  
+    public static void main(String... args){
+   	 System.out.println(010);
+    }
+}
+
+7.
+Wat is autoinitialisatie en wanneer komt het voor?
+
+8.
+Schrijf een voorbeeld in werkende code van een statische methode succesvol aanroept.
+
+9.
+Noem de accessmodifiers van klein naar groot, en hun effect.
+
+10.
+Programmeer een voorbeeld van shadowing.

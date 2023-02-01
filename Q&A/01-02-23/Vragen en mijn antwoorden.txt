@@ -1,0 +1,113 @@
+1. Wat is jouw vraag voor je klasgenoot?
+Wat word er op het scherm geprint?
+
+System.out.println(23 - - - + 4.0 + - 21 * 3);
+
+
+2. Is String een reserved word?
+Nee, dit is geen reserved woord.
+
+3. Is instanceOf een reserved word?
+Nee, dit is geen reserved woord.
+
+4. Wat wordt er op het scherm geprint?
+class Demo {
+    int a = fietsen();
+    static int b = new Koe().melken();
+    public static void main(String... args) {
+        System.out.println("melk");
+        System.out.println(new Demo().a);
+    }    
+    int fietsen(){
+        System.out.println("gaan");
+        return 7;
+    }
+}
+class Koe{
+    static int melken(){
+        System.out.println("gaos");
+        return 14;
+    }
+}
+
+gaos
+melk
+gaan
+7
+
+5. Wat wordt er op het scherm geprint?
+class Demo {
+    public static void main(String... args) {
+        Verhuisbaar b = new Bank();
+        b.verhuizen();
+    }    
+
+}
+interface Verhuisbaar{
+    void verhuizen() {
+        System.out.println("verhuizen die handel");
+    }
+}
+class Bank implements Verhuisbaar{
+}
+
+Compileert niet, een interface kan je niet declareren als object.
+
+6. Welke drie categorieen exceptions zijn er en wat is belangrijk per categorie om te onthouden?
+Exceptions, hierop controleert de compiler of er iets mee word gedaan.
+RuntimeException, deze controleert de compiler niet en komt meestal onverwacht naar voren.
+Error, ook deze controleert de compiler niet. Is geen covariant van Exception.
+
+7. Wat wordt er op het scherm geprint?
+class Demo {
+    public static void main(String... args) {
+        System.out.println("go");
+        Boombox b = new Boombox();
+        b.inkopen();
+        System.out.println("no");
+    }    
+}
+class Boombox{
+    void inkopen() {
+        throw new VerkochtException();
+    }
+}
+class VerkochtException extends RuntimeException{}
+
+go
+RuntimeException
+
+8.
+class Demo {
+    public static void main(String... args) {
+        System.out.println("so");
+        Boombox b = new Boombox();
+        b.inkopen();
+        System.out.println("jo");
+    }    
+}
+class Boombox{
+    void inkopen() {
+        throw new VerkochtException();
+    }
+}
+class VerkochtException extends Exception{}
+
+Compileert niet, VerkochtException word niet afgehandeld en dat moet wel omdat deze nu Exception extends.
+
+9. Is unsigned een reserved word?
+Ja
+
+10. Programmeer een voorbeeld van een multi-catch blok.
+
+class CustomException extends Exception {}
+
+try {
+		int a = 3 / 0;
+	} catch (CustomException CE) {
+		System.out.println(CE);
+	} catch (RuntimeException RTE) {
+		System.out.println(RTE);
+	} catch (Exception E) {
+		System.out.println(E);
+	}

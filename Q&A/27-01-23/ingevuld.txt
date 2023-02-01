@@ -1,0 +1,162 @@
+1.
+Wat is jouw vraag voor je collega-studenten?
+- Vergeten te bedenken.
+
+2.
+Wat zijn de vier regels bij overriding?
+- Signature moet hetzelfde zijn
+- returntype moet een covariant zijn
+- accessmodifiers mogen niet vernauwen
+- throws clausule mag een covariant bevatten (of niet)
+
+3.
+Programmeer een stuk broncode dat mij duidelijk maakt wat er bedoeld wordt met:
+Links bepaalt waar je bij kunt, rechts bepaalt wat je zou kunnen en doet
+
+class Dier {int aantalPoten; char geslacht;}
+class Kat extends Dier {
+	public void objectOverRandDuwen() {}
+}
+
+Dier Kiki = new Kat();
+Kiki.aantalPoten = 4;
+Kiki.geslacht = 'V'
+Kiki.objectOverRandDuwen();
+
+
+4.
+Wat wordt er op het scherm geprint?
+class Demo{           	 
+    public static void main(String[] args){
+   	 int[][] oeps[] = {{{},{4,3,2},{5}},{},null,{null, {4,5,6}}};
+   	 int[] ff = oeps[3][1];
+   	 System.out.println(ff[2]);
+   	 System.out.println(oeps[0][2][1]);
+   	 System.out.println("gelukt");
+    }    
+}
+
+Compiled niet omdat de eerste syso buiten de array iets probeert op te halen.
+
+5.
+Wat wordt er op het scherm geprint?
+class Demo{
+    public static void main(String[] args) {
+   	 lopen();
+    }
+    static void lopen(){
+   	 System.out.println("in lopen");
+   	 new Fiets().fietsen(6);
+    }
+}
+
+class Fiets{
+    void fietsen(int getal){
+   	 System.out.println(getal+getal+"fietsen"+getal+getal);
+    }
+}
+
+Compiled niet omdat er in lopen() geen declaratie is waar de 'new Fiets().fietsen(6);' op word geinstantieerd.
+
+6.
+Wat zijn de verschillen tussen primitives en reference types?
+
+Primitives worden opgeslagen in de Stack en Reference types worden opgeslagen op de Heap.
+Je kan niet meer Primitives maken dan de 8 die in Java zitten, je kan oneindig veel reference types maken.
+
+
+7.
+Wat wordt er op het scherm geprint?
+class Demo{
+    public static void main(String[] args) {
+   	 System.out.println(args.length);
+   	 lopen();
+    }
+    void lopen(){
+   	 System.out.println("in lopen");
+    }
+}
+
+Dat is afhankelijk of je nog argumenten mee geeft als je het commando 'java Demo' uitvoerd.
+Zonder argumenten komt er het volgende op het scherm te staan:
+0
+in lopen
+
+8.
+Wat wordt er op het scherm geprint?
+class Demo{           	 
+    public static void main(String[] args){
+   	 System.out.println("start");
+   	 Groen g = new Groen();
+   	 System.out.println(g.rood.a);
+   	 System.out.println("kleur");
+   	 g.rood.a();
+    }    
+}
+
+class Groen{
+    static LightRood rood;
+    Groen(){
+   	 rood = new LightRood();
+    }
+}
+
+class Rood{
+    static int a = 34;
+    Rood(){
+   	 System.out.println("Blauw");
+    }
+    int a(){
+   	 System.out.println("lightrood");
+   	 return 66;
+    }
+}
+
+class LightRood extends Rood{
+    static int a = 35;
+    int a(){
+   	 System.out.println("rood");
+   	 return 88;
+    }
+}
+
+Het volgende word geprint:
+start
+Blauw
+35
+kleur
+rood
+
+9.
+Wat is het eerste statement van iedere constructor?
+Impliciet super(); , kan je eventueel overschrijven met this();
+
+10.
+Wat wordt er op het scherm geprint?
+class Demo{
+    public static void main(String[] args) {
+   	 lopen(new Fiets());
+    }
+    static void lopen(Fiets bike){
+   	 System.out.println("in lopen");
+   	 System.out.println("lopen met "+bike.snelheid);
+   	 bike.snelheid = new Fiets().fietsen(6);
+   	 System.out.println("lopen met "+bike.snelheid);
+   	 bike.fietsen(9);
+    }
+}
+
+class Fiets{
+    int snelheid = 3;
+    int fietsen(int snelheid){  
+   	 System.out.println("fietsen met "+snelheid);
+   	 return 8;
+    }
+}
+
+Het volgende word geprint:
+in lopen
+lopen met 3
+fietsen met 6
+lopen met 8
+fietsen met 9

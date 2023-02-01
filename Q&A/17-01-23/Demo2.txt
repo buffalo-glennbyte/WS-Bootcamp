@@ -1,0 +1,54 @@
+
+class Demo2{  
+    public static void main(String[] args){
+        System.out.println("Inheritance");
+        // referentie type  // objecttype moet covariant zijn van referentie type
+        Dier dier1 = new Dier();
+        dier1.aantalogen = 25;
+    //    dier1.staart = 15;
+        
+        Konijn k = new Konijn();
+        k.aantalogen = 2;
+        k.staart = 1;
+        
+        Dier dier2 = new Konijn();
+        dier2.aantalogen = 4;
+    //    dier2.staart = 4; // NIET
+        
+        
+        
+        DierenAmbulance da = new DierenAmbulance();
+        da.ophalen(new Dier());
+        da.ophalen(new Konijn());
+        Dier[] dieren = {new Konijn()};
+    }
+}
+
+class Dier{
+    int aantalogen;
+    
+}
+class Konijn extends Dier{
+    int staart;
+}
+class DierenAmbulance{
+    void ophalen(Dier dier) {
+        
+    }
+}
+
+//   Konijn Dier   = Ja
+//   Konijn Konijn = Ja
+//   Dier  Konijn  = Hoeft niet /  misschien / bekijken ligt eraan
+//   Konijn Olietanker = Nee
+
+
+// 0111.nl/iwp
+// iwp
+// iwp321pwi
+// Invoer docent bekijken
+
+
+
+
+

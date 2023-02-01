@@ -1,0 +1,68 @@
+Antwoorden Les:
+
+2. 
+Had ik goed.
+
+3. 
+class Demo{
+    public static void main(String[] args) {
+   	 Dier dier = new Konijn();
+   	 // links bepaalt waar het bij kan
+   	 dier.a = 5;
+   	 // rechts bepaalt wat het zou kunnen
+   	 //dier.b = 6;
+   	 Konijn k = (Konijn)dier;
+   	 k.b = 6;
+   	 k.a = 4;
+   	 // recht bepaalt wat het doet
+   	 dier.b();
+    }
+}
+class Dier{
+    int a;
+    void b() {
+   	 System.out.println("ene");
+    }
+}
+
+class Konijn extends Dier{
+    int b;
+    void b() {
+   	 System.out.println("andere");
+    }
+    
+}
+
+4.
+Compiled wel, print eerst 6 en geeft daarna array out of bounds exception.
+
+5.
+in lopen
+12fietsen66
+
+6.
+primitive: 
+ook de waarde leeft op de stack
+maar 8
+helemaal geen garbage collector
+veel meer operators mogelijk
+geen methoden en fiels
+
+reference type: 
+object op heap, alleen reference op de stack
+zelf maken
+garbage collector
+minder operators mogelijk
+methoden en fields
+
+7. 
+Compileert niet, methode lopen is niet static.
+
+8.
+Had ik goed.
+
+9.
+Had ik goed.
+
+10.
+Had ik goed.
